@@ -443,7 +443,7 @@ body {
   .shopping__list {
     list-style: none;
     max-height: 77rem;
-    overflow: scroll; }
+    overflow: hidden; }
   .shopping__item {
     display: flex;
     align-items: flex-start;
@@ -480,13 +480,16 @@ body {
   .shopping__delete {
     margin-top: .5rem;
     position: absolute;
+    top: 50%;
     right: 0;
+    transform: translateY(-50%);
     background-image: linear-gradient(to right, transparent 0%, #fff 40%, #fff 100%);
     width: 3.75rem;
     padding-left: 2rem;
     visibility: hidden;
     opacity: 0;
-    transition: all .5s; }
+    transition: opacity .5s; 
+  }
   .shopping__item:hover .shopping__delete {
     opacity: 1;
     visibility: visible; }
